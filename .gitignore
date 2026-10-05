@@ -1,0 +1,8 @@
+target/
+vidpix
+vidpix.exe
+ffmpeg
+ffmpeg.exe
+*_vidpix.mp4
+*_vidpix.gif
+repomix-output.xml

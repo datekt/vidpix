@@ -1,0 +1,34 @@
+[package]
+name = "vidpix"
+version = "0.1.0"
+edition = "2021"
+description = "Convert videos into ASCII animation (mp4/gif)"
+authors = ["datekt"]
+license = "MIT"
+repository = "https://github.com/datekt/vidpix"
+readme = "README.md"
+
+[lib]
+name = "vidpix"
+path = "src/lib.rs"
+
+[[bin]]
+name = "vidpix"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+dialoguer = "0.11"
+indicatif = "0.17"
+walkdir = "2"
+ffmpeg-sidecar = "2"
+image = "0.25"
+imageproc = "0.25"
+ab_glyph = "0.2"
+tempfile = "3"
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = "z"
+strip = true
